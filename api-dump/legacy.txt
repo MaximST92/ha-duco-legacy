@@ -1,0 +1,84 @@
+### endpoints referenced by web UI
+board_info
+boxinfo
+charset
+json_list
+json_nodeinfo
+nodeinfo
+nodeinfoget
+nodeinfotable
+nodelist
+nodelist_array
+nodelist_count
+nodelist_index
+nodesetlinkmode
+
+### GET /board_info
+{"uptime":1669,"swversion":"16036.5.4.0","mac":"00:08:5f:00:00:01","ip":"192.0.2.10"}
+
+### GET /nodelist
+{"nodelist": [1,2,3,4,5,6,7,8,9,10]}
+
+### GET /boxinfoget
+{"General":{"Time": 1794821601,"RFHomeID": "0x00000000","InstallerState": "OPERATIONAL"},"Calibration":{"CalibIsValid":true,"CalibState":"IDLE","CalibError":"0x0000","KvalueOut":31488,"KvalueValve2":111296,"KvalueValve3":194096,"KvalueValve4":106512,"KvalueValve5":305360,"KvalueValve6":134432,"KvalueValve7":151072,"KvalueValve8":166224,"KvalueValve9":181744},"Performance":{"PressureTotal":362,"PressureTotal":222,"PressureValve2":17,"PressureValve3":140,"PressureValve4":99,"PressureValve5":11,"PressureValve6":20,"PressureValve7":8,"PressureValve8":25,"PressureValve9":108,"PowerNow":5,"PowerAvg":5,"PowerMax":85},"WeatherStation":{"Present":false}}
+
+### GET /nodeinfoget?node=1
+{"node": 1,"devtype" : "BOX","subtype" : 1,"netw" : "VIRT","addr": 1,"sub": 1,"prnt": 0,"asso": 0,"location" : "","state" : "AUTO","cntdwn" : 0,"mode" : "AUTO","trgt": 14,"actl": 17,"ovrl": 255,"snsr": 0,"cerr": 0,"swversion":"16010.11.3.0","serialnb":"PS0000000001","temp": 0.0,"co2": 0,"rh": 0.00,"show" : 0,"link" : 0}
+
+### GET /nodeconfigget?node=1
+{"node": 1,"AutoMin" : {"Val":10, "Min":10, "Inc":5, "Max":100},"AutoMax" : {"Val":100, "Min":10, "Inc":5, "Max":100},"Capacity" : {"Val":0, "Min":0, "Inc":5, "Max":750},"Manual1" : {"Val":25, "Min":0, "Inc":5, "Max":70},"Manual2" : {"Val":70, "Min":25, "Inc":5, "Max":100},"Manual3" : {"Val":100, "Min":70, "Inc":5, "Max":100},"ManualTimeout" : {"Val":30, "Min":5, "Inc":5, "Max":9995},"Location" : ""}
+
+### GET /nodeinfoget?node=2
+{"node": 2,"devtype" : "VLVCO2","subtype" : 14,"netw" : "WI","addr": 2,"sub": 1,"prnt": 1,"asso": 0,"location" : "Bedroom2","state" : "AUTO","cntdwn" : 0,"mode" : "AUTO","trgt": 10,"actl": 10,"ovrl": 255,"snsr": 0,"cerr": 0,"swversion":"12035.11.5.0","serialnb":"RS0000000002","temp": 22.4,"co2": 617,"rh": 0.00,"show" : 0,"link" : 0}
+
+### GET /nodeconfigget?node=2
+{"node": 2,"AutoMin" : {"Val":10, "Min":10, "Inc":5, "Max":100},"AutoMax" : {"Val":100, "Min":10, "Inc":5, "Max":100},"Capacity" : {"Val":50, "Min":0, "Inc":5, "Max":500},"CO2Setpoint" : {"Val":800, "Min":0, "Inc":10, "Max":2000},"Manual1" : {"Val":10, "Min":0, "Inc":5, "Max":50},"Manual2" : {"Val":50, "Min":10, "Inc":5, "Max":100},"Manual3" : {"Val":100, "Min":50, "Inc":5, "Max":100},"ManualTimeout" : {"Val":15, "Min":5, "Inc":5, "Max":9995},"TempDependent" : {"Val":1, "Min":0, "Inc":1, "Max":1},"Location" : "Bedroom2"}
+
+### GET /nodeinfoget?node=3
+{"node": 3,"devtype" : "UNKN","subtype" : 1,"netw" : "WI","addr": 3,"sub": 1,"prnt": 1,"asso": 0,"location" : "Laundry","state" : "AUTO","cntdwn" : 0,"mode" : "AUTO","ovrl": 255,"snsr": 10,"cerr": 0,"swversion":"12035.11.5.0","serialnb":"RS0000000003","show" : 0,"link" : 0}
+
+### GET /nodeconfigget?node=3
+{"node": 3,"AutoMin" : {"Val":20, "Min":10, "Inc":5, "Max":100},"AutoMax" : {"Val":100, "Min":20, "Inc":5, "Max":100},"Capacity" : {"Val":110, "Min":0, "Inc":5, "Max":500},"CO2Setpoint" : {"Val":800, "Min":0, "Inc":10, "Max":2000},"RHSetpoint" : {"Val":60, "Min":0, "Inc":5, "Max":90},"RHDelta" : {"Val":0, "Min":0, "Inc":1, "Max":1},"Manual1" : {"Val":10, "Min":0, "Inc":5, "Max":50},"Manual2" : {"Val":50, "Min":10, "Inc":5, "Max":100},"Manual3" : {"Val":100, "Min":50, "Inc":5, "Max":100},"ManualTimeout" : {"Val":15, "Min":5, "Inc":5, "Max":9995},"TempDependent" : {"Val":1, "Min":0, "Inc":1, "Max":1},"Location" : "Laundry"}
+
+### GET /nodeinfoget?node=4
+{"node": 4,"devtype" : "VLVCO2","subtype" : 4,"netw" : "WI","addr": 4,"sub": 1,"prnt": 1,"asso": 0,"location" : "Kitchen","state" : "AUTO","cntdwn" : 0,"mode" : "AUTO","trgt": 10,"actl": 32,"ovrl": 255,"snsr": 0,"cerr": 0,"swversion":"12035.11.5.0","serialnb":"RS0000000004","temp": 22.8,"co2": 571,"rh": 0.00,"show" : 0,"link" : 0}
+
+### GET /nodeconfigget?node=4
+{"node": 4,"AutoMin" : {"Val":10, "Min":10, "Inc":5, "Max":100},"AutoMax" : {"Val":100, "Min":10, "Inc":5, "Max":100},"Capacity" : {"Val":125, "Min":0, "Inc":5, "Max":500},"CO2Setpoint" : {"Val":800, "Min":0, "Inc":10, "Max":2000},"Manual1" : {"Val":10, "Min":0, "Inc":5, "Max":50},"Manual2" : {"Val":50, "Min":10, "Inc":5, "Max":100},"Manual3" : {"Val":100, "Min":50, "Inc":5, "Max":100},"ManualTimeout" : {"Val":60, "Min":5, "Inc":5, "Max":9995},"TempDependent" : {"Val":1, "Min":0, "Inc":1, "Max":1},"Location" : "Kitchen"}
+
+### GET /nodeinfoget?node=5
+{"node": 5,"devtype" : "VLVCO2","subtype" : 6,"netw" : "WI","addr": 5,"sub": 1,"prnt": 1,"asso": 0,"location" : "Toilet","state" : "AUTO","cntdwn" : 0,"mode" : "AUTO","trgt": 10,"actl": 0,"ovrl": 255,"snsr": 0,"cerr": 0,"swversion":"12035.11.5.0","serialnb":"RS0000000005","temp": 23.3,"co2": 616,"rh": 0.00,"show" : 0,"link" : 0}
+
+### GET /nodeconfigget?node=5
+{"node": 5,"AutoMin" : {"Val":10, "Min":10, "Inc":5, "Max":100},"AutoMax" : {"Val":100, "Min":10, "Inc":5, "Max":100},"Capacity" : {"Val":25, "Min":0, "Inc":5, "Max":500},"CO2Setpoint" : {"Val":800, "Min":0, "Inc":10, "Max":2000},"Manual1" : {"Val":10, "Min":0, "Inc":5, "Max":50},"Manual2" : {"Val":50, "Min":10, "Inc":5, "Max":100},"Manual3" : {"Val":100, "Min":50, "Inc":5, "Max":100},"ManualTimeout" : {"Val":15, "Min":5, "Inc":5, "Max":9995},"TempDependent" : {"Val":1, "Min":0, "Inc":1, "Max":1},"Location" : "Toilet"}
+
+### GET /nodeinfoget?node=6
+{"node": 6,"devtype" : "VLVCO2","subtype" : 14,"netw" : "WI","addr": 6,"sub": 1,"prnt": 1,"asso": 0,"location" : "Office","state" : "AUTO","cntdwn" : 0,"mode" : "AUTO","trgt": 10,"actl": 10,"ovrl": 255,"snsr": 0,"cerr": 0,"swversion":"12035.11.5.0","serialnb":"RS0000000006","temp": 23.2,"co2": 668,"rh": 0.00,"show" : 0,"link" : 0}
+
+### GET /nodeconfigget?node=6
+{"node": 6,"AutoMin" : {"Val":10, "Min":10, "Inc":5, "Max":100},"AutoMax" : {"Val":100, "Min":10, "Inc":5, "Max":100},"Capacity" : {"Val":50, "Min":0, "Inc":5, "Max":500},"CO2Setpoint" : {"Val":800, "Min":0, "Inc":10, "Max":2000},"Manual1" : {"Val":10, "Min":0, "Inc":5, "Max":50},"Manual2" : {"Val":50, "Min":10, "Inc":5, "Max":100},"Manual3" : {"Val":100, "Min":50, "Inc":5, "Max":100},"ManualTimeout" : {"Val":15, "Min":5, "Inc":5, "Max":9995},"TempDependent" : {"Val":1, "Min":0, "Inc":1, "Max":1},"Location" : "Office"}
+
+### GET /nodeinfoget?node=7
+{"node": 7,"devtype" : "VLVCO2","subtype" : 14,"netw" : "WI","addr": 7,"sub": 1,"prnt": 1,"asso": 0,"location" : "Bedroom3","state" : "AUTO","cntdwn" : 0,"mode" : "AUTO","trgt": 10,"actl": 0,"ovrl": 255,"snsr": 0,"cerr": 0,"swversion":"12035.11.5.0","serialnb":"RS0000000007","temp": 21.8,"co2": 626,"rh": 0.00,"show" : 0,"link" : 0}
+
+### GET /nodeconfigget?node=7
+{"node": 7,"AutoMin" : {"Val":10, "Min":10, "Inc":5, "Max":100},"AutoMax" : {"Val":100, "Min":10, "Inc":5, "Max":100},"Capacity" : {"Val":30, "Min":0, "Inc":5, "Max":500},"CO2Setpoint" : {"Val":800, "Min":0, "Inc":10, "Max":2000},"Manual1" : {"Val":10, "Min":0, "Inc":5, "Max":50},"Manual2" : {"Val":50, "Min":10, "Inc":5, "Max":100},"Manual3" : {"Val":100, "Min":50, "Inc":5, "Max":100},"ManualTimeout" : {"Val":15, "Min":5, "Inc":5, "Max":9995},"TempDependent" : {"Val":1, "Min":0, "Inc":1, "Max":1},"Location" : "Bedroom3"}
+
+### GET /nodeinfoget?node=8
+{"node": 8,"devtype" : "VLVCO2","subtype" : 14,"netw" : "WI","addr": 8,"sub": 1,"prnt": 1,"asso": 0,"location" : "Bedroom1","state" : "AUTO","cntdwn" : 0,"mode" : "AUTO","trgt": 10,"actl": 10,"ovrl": 255,"snsr": 0,"cerr": 0,"swversion":"12035.11.5.0","serialnb":"RS0000000008","temp": 21.8,"co2": 603,"rh": 0.00,"show" : 0,"link" : 0}
+
+### GET /nodeconfigget?node=8
+{"node": 8,"AutoMin" : {"Val":10, "Min":10, "Inc":5, "Max":100},"AutoMax" : {"Val":100, "Min":10, "Inc":5, "Max":100},"Capacity" : {"Val":50, "Min":0, "Inc":5, "Max":500},"CO2Setpoint" : {"Val":700, "Min":0, "Inc":10, "Max":2000},"Manual1" : {"Val":10, "Min":0, "Inc":5, "Max":50},"Manual2" : {"Val":50, "Min":10, "Inc":5, "Max":100},"Manual3" : {"Val":100, "Min":50, "Inc":5, "Max":100},"ManualTimeout" : {"Val":15, "Min":5, "Inc":5, "Max":9995},"TempDependent" : {"Val":1, "Min":0, "Inc":1, "Max":1},"Location" : "Bedroom1"}
+
+### GET /nodeinfoget?node=9
+{"node": 9,"devtype" : "UNKN","subtype" : 1,"netw" : "WI","addr": 9,"sub": 1,"prnt": 1,"asso": 0,"location" : "Bathroom","state" : "AUTO","cntdwn" : 0,"mode" : "AUTO","ovrl": 255,"snsr": 21,"cerr": 0,"swversion":"12035.11.5.0","serialnb":"RS0000000009","show" : 0,"link" : 0}
+
+### GET /nodeconfigget?node=9
+{"node": 9,"AutoMin" : {"Val":20, "Min":10, "Inc":5, "Max":100},"AutoMax" : {"Val":100, "Min":20, "Inc":5, "Max":100},"Capacity" : {"Val":100, "Min":0, "Inc":5, "Max":500},"CO2Setpoint" : {"Val":800, "Min":0, "Inc":10, "Max":2000},"RHSetpoint" : {"Val":60, "Min":0, "Inc":5, "Max":90},"RHDelta" : {"Val":0, "Min":0, "Inc":1, "Max":1},"Manual1" : {"Val":10, "Min":0, "Inc":5, "Max":50},"Manual2" : {"Val":50, "Min":10, "Inc":5, "Max":100},"Manual3" : {"Val":100, "Min":50, "Inc":5, "Max":100},"ManualTimeout" : {"Val":30, "Min":5, "Inc":5, "Max":9995},"TempDependent" : {"Val":1, "Min":0, "Inc":1, "Max":1},"Location" : "Bathroom"}
+
+### GET /nodeinfoget?node=10
+{"node": 10,"devtype" : "UC","subtype" : 1,"netw" : "RF","addr": 2,"sub": 1,"prnt": 9,"asso": 9,"location" : "","state" : "-","cntdwn" : 0,"mode" : "-","ovrl": 255,"snsr": 0,"cerr": 0,"swversion":"17046.12.1.0","serialnb":"RS0000000010","temp": 19.0,"co2": 0,"rh": 0.00,"rssi_n2m" : 132,"hop_via" : 2,"rssi_n2h" : 255,"show" : 0,"link" : 0}
+
+### GET /nodeconfigget?node=10
+{"node": 10,"Manual1" : {"Val":10, "Min":0, "Inc":5, "Max":50},"Manual2" : {"Val":50, "Min":10, "Inc":5, "Max":100},"Manual3" : {"Val":100, "Min":50, "Inc":5, "Max":100},"ManualTimeout" : {"Val":30, "Min":5, "Inc":5, "Max":9995},"Location" : ""}
+

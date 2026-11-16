@@ -1,0 +1,12 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Duco (legacy Communication Print)",
+        "data": { "host": "Host or IP address" }
+      }
+    },
+    "error": { "cannot_connect": "Can't reach the Duco board" },
+    "abort": { "already_configured": "This Duco board is already set up" }
+  }
+}
